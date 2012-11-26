@@ -1,0 +1,6 @@
+--type-add=php=inc
+--type-add=html=ftl
+--type-add=vb=brs
+--type-set=puppet=pp
+--type-set=julia=jl
+--no-group
