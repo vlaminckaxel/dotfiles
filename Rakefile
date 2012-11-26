@@ -24,6 +24,7 @@ task :install do
 
   Dir['bin/*'].each do |file|
     target_file = File.join(target_dir, 'bin', Pathname.new(file).basename)
+    FileUtils.mkdir_p File.dirname(target_file)
     FileUtils.cp file, target_file, :preserve => true
     puts "Installed #{file} to #{target_file}"
   end
