@@ -1,0 +1,13 @@
+# incremental searching with up and down
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+"\C-b": unix-filename-rubout
+
+$if Bash
+    Space: magic-space
+$endif
+
+set editing-mode vi
+set keymap vi
+
