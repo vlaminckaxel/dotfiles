@@ -29,6 +29,11 @@ task :install do
     puts "Installed #{file} to #{target_file}"
   end
 
+  vim_dir = File.join(target_dir, '.vim')
+  FileUtils.mkdir_p File.dirname(vim_dir)
+  FileUtils.cp_r 'vim/.', vim_dir
+  FileUtils.cp 'vim/vimrc', File.join(target_dir, ".vimrc")
+  puts "Installed vim to #{target_dir}"
 end
 
 task :default => ['install']
