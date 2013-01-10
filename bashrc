@@ -8,6 +8,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+platform=`uname`
+
 set -o vi
 export EDITOR=vim
 export BG=dark
@@ -50,7 +52,9 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-alias ls='ls --color=auto -G'
+if [ ! "$platform" == 'Darwin' ]; then
+	alias ls='ls --color=auto -G'
+fi
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
@@ -60,7 +64,6 @@ alias egrep='egrep --color=auto'
 #alias ls='ls --color=auto -G'
 alias ll='ls -lG'
 
-platform=`uname`
 if [ "$platform" == 'Darwin' ]; then
 	alias alert='growlnotify -m DONE'
 elif [ ! -z "TMUX" ]; then
