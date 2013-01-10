@@ -21,7 +21,7 @@ shopt -s histappend
 PROMPT_COMMAND='history -a'
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-shopt -s globstar
+eval "$(shopt -p | grep globstar)"
 
 # bindings a la emacs
 bind -m vi-insert "\C-l":clear-screen
