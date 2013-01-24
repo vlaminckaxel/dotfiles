@@ -1,0 +1,7 @@
+[user]
+	name = Nicolas Braem
+	email = nicolas.braem@gmail.com
+[color]
+	ui = true
+[alias]
+	logg = log --format=oneline -n 20
