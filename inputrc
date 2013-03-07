@@ -1,6 +1,7 @@
 # incremental searching with up and down
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+"\C-h": history-search-backward
 
 "\C-b": unix-filename-rubout
 
