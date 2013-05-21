@@ -4,4 +4,6 @@
 [color]
 	ui = true
 [alias]
-	logg = log --format=oneline -n 20
+	l = log --format=oneline -n 20
+  c = commit --verbose
+  s = status
