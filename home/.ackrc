@@ -6,4 +6,5 @@
 --type-set=coffee=coffee
 --type-set=css=scss
 --type-set=html=mustache
+--type-set=css=scss
 --no-group
