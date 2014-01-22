@@ -4,6 +4,8 @@
 "\C-h": history-search-backward
 
 "\C-b": unix-filename-rubout
+"\C-p": previous-history
+"\C-n": next-history
 
 $if Bash
     Space: magic-space
