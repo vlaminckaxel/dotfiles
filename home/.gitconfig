@@ -7,3 +7,5 @@
 	l = log --format=oneline -n 20
   c = commit --verbose
   s = status
+[core]
+	excludesfile = ~/.gitignore
