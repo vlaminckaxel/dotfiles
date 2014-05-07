@@ -4,8 +4,8 @@
 [color]
 	ui = true
 [alias]
-	l = log --format=oneline -n 20
-  c = commit --verbose
-  s = status
+	l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	c = commit --verbose
+	s = status -sb
 [core]
 	excludesfile = ~/.gitignore
