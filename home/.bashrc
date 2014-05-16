@@ -39,7 +39,14 @@ case "$TERM" in
 esac
 
 if [ "$color_prompt" = yes ]; then
-	PROMPT_COLOR='\[\033[1;33;1m\]'
+    if [ ! "$platform" == 'Darwin' ]; then
+        # red for linux
+        PROMPT_COLOR='\[\033[1;31;1m\]'
+    else
+        # yellow for mac
+        PROMPT_COLOR='\[\033[1;33;1m\]'
+    fi
+
 	RESET_COLOR='\[\033[0m\]'
 	PS1="${PROMPT_COLOR}\w $ ${RESET_COLOR}"
 else
