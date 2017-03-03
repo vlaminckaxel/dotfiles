@@ -89,19 +89,3 @@ fi
 fixssh() {
     eval $(tmux show-env -s |grep '^SSH_')
 }
-kpython(){
-  docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it kaggle/python python "$@"
-}
-ikpython() {
-  docker run -v $PWD:/tmp/working -w=/tmp/working --rm -it kaggle/python ipython
-}
-kjupyter() {
-  docker run -v $PWD:/tmp/working -w=/tmp/working -p 8888:8888 --rm -it kaggle/python jupyter notebook --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working
-}
-#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-7.5/bin
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/cuda-8.0/bin
-#export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:/usr/lib/x86_64-linux-gnu
-
-# added by Anaconda2 4.0.0 installer
-export PATH="/home/nbraem/anaconda2/bin:$PATH"
