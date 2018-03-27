@@ -5,3 +5,8 @@ homesick clone nbraem/dotfiles && homesick symlink dotfiles --force
 homesick clone nbraem/dotvim && homesick symlink dotvim
 source ~/.bashrc
 sudo apt-get install exuberant-ctags silversearcher-ag
+
+# vim 8
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get update
+sudo apt-get install -y vim
